@@ -1,0 +1,51 @@
+<html>
+    <title>
+        Tetris 2000
+    </title>
+    <head>
+            <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="Grid-Container">
+            <div class="Title"> Tetris 2000 </div>
+            <div class="sidebar">Next
+              <div id="upcoming"></div>
+              <div id="changes">Changes left: </div>
+              <div id="changePowerups">0</div>
+              <div id="gameStatus">Level : 1 <br> Score : 0</div>
+            </div>
+            <div id="board">
+                <div class="top" style="display: block">
+                    <button id="help">?</button>
+                    <button id="NewGame">New Game</button>
+                    <button id="load">Load</button>
+                    <button id="pause"><img id ="p" src="img/pause.button.png" style="width: 235%;max-height: 235%"></button>
+                    <button id="save">Save</button>
+                    <button id="sound"><img id="mute" src="img/mute.button.png" style="width: 30px;height: 30px; opacity : 1"></button>
+                    <button id="nextSong"><img id="nextSong1" src="img/nextSong.button.png" style="width: 30px;height: 30px;"></button>
+                    <div id="tutorial">How to Play:<br><br> -Z and X to rotate<br>-C to change the next piece<br>-Break 2 or more lines at a time to increase your change powerups<br>-Watch out for bombs!<br>-(Cheat: Press B to spawn a bomb)</div>
+
+                </div>
+                <div id="playerNameForm">
+                  Player Name:
+                  <input id="getName" type="text"></input>
+                  <button id="submitName">Submit</button><br>
+                  <div id="thanks"><span></span></div>
+                </div>
+                <div class="HighScore" style="display: none">
+                    <p></p>
+                        <div id="HighScoreTitle">Tetris High Scores</div>
+                    <ul id="PlayerList">
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <!--<script src="backend/high_scores.js"></script>-->
+        <script src="backend/ajax.js"></script>
+        <script src="TetrisGameplay.js"></script>
+    </body>
+</html>
